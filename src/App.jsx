@@ -13,13 +13,17 @@ const router = createBrowserRouter([
   {
     element: <AppLayout />,
     children: [
-      { path: "/", element: <Dashboard /> },          // homepage
-      { path: "/healthz", element: <HealthCheck /> }, // <-- ADD THIS BEFORE WILDCARD
-      { path: "/code/:code", element: <LinkPage /> }, // stats
-      { path: "/:code", element: <RedirectLink /> },  // redirect short links
+      { path: "/healthz", element: <HealthCheck /> },  // system ping route
+
+      { path: "/code/:code", element: <LinkPage /> },  // stats page
+
+      { path: "/:code", element: <RedirectLink /> },   // short URL redirect
+
+      { path: "/", element: <Dashboard /> },           // homepage (must be last)
     ],
   },
 ]);
+
 
 function App() {
   return <RouterProvider router={router} />;

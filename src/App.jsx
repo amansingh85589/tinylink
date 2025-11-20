@@ -3,7 +3,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import AppLayout from "./layouts/app-layout";
 import Dashboard from "./pages/dashboard";
-import LinkPage from "./pages/Link";
+import LinkPage from "./pages/link.jsx";
+
 import RedirectLink from "./pages/redirect-link";
 
 const router = createBrowserRouter([

@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/healthz", "destination": "/index.html" },
+    { "source": "/code/:code", "destination": "/index.html" },
+    { "source": "/:code", "destination": "/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
